@@ -1,0 +1,14 @@
+<h1>Which Recipe would you like to add to <%= @tag.description %></h1>
+
+<h3>Select a Recipe</h3>
+
+<form action="/recipes_tags" method="post">
+  <select name="recipes_tags[recipe_id]">
+    <% @recipes.each do |recipe| %>
+      <option value="<%= recipe.id %>"><%= recipe.name %></option>
+    <% end %>
+  </select>
+  <button>Tag This Recipe</button>
+</form>
+
+<button><a href="/">Home</a></button>

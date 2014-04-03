@@ -1,0 +1,11 @@
+<h1>Make a Recipe-Tag Connection</h1>
+
+<h3>Select a Tag</h3>
+<ul>
+  <% @tags.each do |tag| %>
+    <li><a href="recipes_tags/<%= tag.id %>/new"><%= tag.description %></a></li>
+  <% end %>
+</ul>
+
+
+<button><a href="/">Home</a></button>
