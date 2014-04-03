@@ -1,0 +1,9 @@
+<label for="recipe_name">Name</label>
+<input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
+<br>
+<label for="recipe_ingredients">Ingredients</label>
+<textarea id="recipe_ingredients" name="recipe[ingredients]" type="text" cols="50" rows="7"><%= @recipe.ingredients %></textarea>
+<br>
+<label for="recipe_instructions">Instructions</label>
+<textarea id="recipe_instructions" name="recipe[instructions]" type="text" cols="50" rows="7"><%= @recipe.instructions %></textarea>
+<br>
