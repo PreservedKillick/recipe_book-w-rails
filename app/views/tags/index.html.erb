@@ -1,11 +1,12 @@
-<h1>Recipe Tags</h1>
+<h1>Recipe Book</h1>
 
+<h3>Click to see recipes by category</h3>
 <ul>
   <% Tag.all.each do |tag| %>
    <li><a href="tags/<%= tag.id %>"><%= tag.description %></a></li>
   <% end %>
 </ul>
 
-<button><a href="tags/new">Add a Tag</a></button>
+<button><a href="recipes/new">Add a Recipe</a></button>
 
-<button><a href="recipes_tags/">Add a Tag to a Recipe</a></button>
+<button><a href="tags/new">Add a Tag</a></button>

@@ -33,6 +33,8 @@ class TagsController < ApplicationController
   def update
     @tag = Tag.find(params[:id])
     if @tag.update(params[:tag])
+      @recipe = Recipe.find(params[:recipe_id])
+      @tag.recipes.include?(@recipe) ? '' : @tag.recipes << @recipe
       flash[:notice] = "Your tag has been updated!"
       redirect_to("/tags/#{@tag.id}")
     else

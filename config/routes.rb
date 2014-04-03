@@ -20,10 +20,5 @@ Recipes::Application.routes.draw do
   match('tags/:id', {:via => [:patch, :put], :to => 'tags#update'})
   match('/', {:via => :get, :to => 'tags#index'})
   match('tags/:id', {:via => :delete, :to => 'tags#destroy'})
-
-  ##recipes_tags routes
-  match('recipes_tags', {:via => :get, :to => 'recipes_tags#index'})
-  match('recipes_tags/:tag_id/new', {:via => :get, :to => 'recipes_tags#new'})
-  match('recipes_tags', {:via => :post, :to=> 'recipes_tags#create'})
 end
 
