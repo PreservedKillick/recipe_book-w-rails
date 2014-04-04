@@ -1,0 +1,12 @@
+<h1>Select the tag for removal from <%= @recipe.name %></h1>
+
+<form action="/recipes_tags/<%= @recipe.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <% @recipe.tags.each do |tag| %>
+    <div>
+    <input type="checkbox" name="tag_id[]" value="<%= tag.id %>"><label for="tag.id"><%= tag.description %></label>
+    </div>
+  <% end %>
+  <button>Update Associations</button>
+</form>
+
